@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/terra_muntanya.obj-0ddd5779fc086c03c4eaa2a63c3ed05b.mesh"
+
+[deps]
+
+files=[ "res://.import/terra_muntanya.obj-0ddd5779fc086c03c4eaa2a63c3ed05b.mesh" ]
+
+source_file="res://Assets/3D Objects/Map/3Ds/terra_muntanya.obj"
+dest_files=[ "res://.import/terra_muntanya.obj-0ddd5779fc086c03c4eaa2a63c3ed05b.mesh", "res://.import/terra_muntanya.obj-0ddd5779fc086c03c4eaa2a63c3ed05b.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

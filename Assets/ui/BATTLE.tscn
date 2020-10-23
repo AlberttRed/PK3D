@@ -1,0 +1,1032 @@
+[gd_scene load_steps=50 format=2]
+
+[ext_resource path="res://Assets/ui/BATTLE.gd" type="Script" id=1]
+[ext_resource path="res://Assets/Sprites/Battlebacks/battlebgFieldNight.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/Battlebacks/enemybaseFieldNight.png" type="Texture" id=3]
+[ext_resource path="res://Assets/ui/battle/battleBase.gd" type="Script" id=4]
+[ext_resource path="res://Assets/font/pkmndp.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://Assets/Sprites/Characters/trainer036.png" type="Texture" id=9]
+[ext_resource path="res://Assets/Sprites/Battlers/567.png" type="Texture" id=10]
+[ext_resource path="res://Assets/ui/Pictures/ball00.png" type="Texture" id=11]
+[ext_resource path="res://Assets/Sprites/Characters/trainer035.png" type="Texture" id=13]
+[ext_resource path="res://Assets/Sprites/Battlebacks/playerbaseFieldNight.png" type="Texture" id=14]
+[ext_resource path="res://Assets/Sprites/Battlers/025b.png" type="Texture" id=16]
+[ext_resource path="res://Assets/Sprites/Characters/trback000.png" type="Texture" id=20]
+[ext_resource path="res://Assets/ui/Pictures/small_ball.png" type="Texture" id=21]
+[ext_resource path="res://Assets/Sprites/Characters/trback002.png" type="Texture" id=22]
+[ext_resource path="res://Assets/ui/Pictures/GRASS BATTLE.png" type="Texture" id=23]
+[ext_resource path="res://Assets/ui/Battle_Options_MessageBox_Style.tres" type="StyleBox" id=24]
+[ext_resource path="res://Assets/ui/HGSS_Font_Style.tres" type="DynamicFont" id=25]
+[ext_resource path="res://Assets/ui/Battle_Moves_MessageBox_Style.tres" type="StyleBox" id=27]
+[ext_resource path="res://Assets/ui/Pictures/types.png" type="Texture" id=29]
+[ext_resource path="res://Assets/ui/Pictures/battlePlayerBoxS.png" type="Texture" id=40]
+[ext_resource path="res://Assets/ui/battle/battle_HPbar.gd" type="Script" id=41]
+[ext_resource path="res://Assets/ui/Pictures/pixel.png" type="Texture" id=42]
+[ext_resource path="res://Assets/ui/Pictures/HPbar_overlay.png" type="Texture" id=43]
+[ext_resource path="res://Assets/ui/Pictures/EXPbar_overlay.png" type="Texture" id=44]
+[ext_resource path="res://Assets/ui/Pictures/battleStatuses.png" type="Texture" id=45]
+[ext_resource path="res://Assets/ui/Pictures/battlePlayerBoxD.png" type="Texture" id=46]
+[ext_resource path="res://Assets/ui/Pictures/battleFoeBoxS.png" type="Texture" id=47]
+[ext_resource path="res://Assets/ui/Pictures/battleFoeBoxD.png" type="Texture" id=48]
+[ext_resource path="res://Assets/ui/Pictures/battleLineup.png" type="Texture" id=49]
+[ext_resource path="res://Assets/ui/Pictures/ballnormal.png" type="Texture" id=50]
+[ext_resource path="res://Assets/ui/Pictures/ballstatus.PNG" type="Texture" id=51]
+[ext_resource path="res://Assets/ui/Pictures/ballfainted.png" type="Texture" id=52]
+
+[sub_resource type="StyleBoxFlat" id=1]
+bg_color = Color( 0.0588235, 0.505882, 0.709804, 1 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+region_rect = Rect2( 0, 0, 260, 414 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=3]
+region_rect = Rect2( 0, 46, 260, 414 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=4]
+region_rect = Rect2( 0, 92, 260, 414 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="StyleBoxTexture" id=5]
+region_rect = Rect2( 0, 138, 260, 414 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFont" id=6]
+size = 26
+extra_spacing_space = -10
+font_data = ExtResource( 5 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 26
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+region_rect = Rect2( 0, 0, 384, 874 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFont" id=9]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=10]
+region_rect = Rect2( 0, 0, 384, 874 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFont" id=11]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=12]
+region_rect = Rect2( 0, 0, 384, 874 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFont" id=13]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxTexture" id=14]
+region_rect = Rect2( 0, 0, 384, 874 )
+axis_stretch_horizontal = 1
+axis_stretch_vertical = 1
+
+[sub_resource type="DynamicFont" id=15]
+size = 22
+font_data = ExtResource( 5 )
+
+[sub_resource type="StyleBoxFlat" id=16]
+bg_color = Color( 0, 0, 0, 1 )
+
+[sub_resource type="DynamicFont" id=17]
+size = 26
+font_data = ExtResource( 5 )
+
+[node name="BATTLE" type="Control"]
+margin_right = 40.0
+margin_bottom = 40.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Background" type="Sprite" parent="."]
+position = Vector2( -3.05176e-05, 0 )
+texture = ExtResource( 2 )
+centered = false
+region_enabled = true
+region_rect = Rect2( -256, 0, 768, 384 )
+
+[node name="enemyBase" type="Sprite" parent="."]
+position = Vector2( 510, 111 )
+texture = ExtResource( 3 )
+centered = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pkmn_enemy_ally" type="Node2D" parent="enemyBase"]
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemyBase/pkmn_enemy_ally"]
+
+[node name="FrameAnimations" type="Node2D" parent="enemyBase/pkmn_enemy_ally"]
+position = Vector2( 73.5032, 85.6775 )
+
+[node name="trainer" type="Sprite" parent="enemyBase/pkmn_enemy_ally"]
+visible = false
+position = Vector2( 62.461, -47.388 )
+texture = ExtResource( 9 )
+centered = false
+region_rect = Rect2( 88, 59, 95, 45 )
+
+[node name="Sprite" type="Sprite" parent="enemyBase/pkmn_enemy_ally"]
+position = Vector2( 176, -34 )
+texture = ExtResource( 10 )
+
+[node name="pokeball" type="Sprite" parent="enemyBase/pkmn_enemy_ally"]
+position = Vector2( 125, 67 )
+texture = ExtResource( 11 )
+
+[node name="pkmn_enemy" type="Node2D" parent="enemyBase"]
+visible = false
+use_parent_material = true
+position = Vector2( 235, -47.388 )
+scale = Vector2( 1e-05, 1e-05 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="enemyBase/pkmn_enemy"]
+
+[node name="FrameAnimations" type="Node2D" parent="enemyBase/pkmn_enemy"]
+position = Vector2( 70, 89 )
+
+[node name="Sprite" type="Sprite" parent="enemyBase/pkmn_enemy"]
+position = Vector2( 128, -34 )
+texture = ExtResource( 10 )
+
+[node name="pokeball" type="Sprite" parent="enemyBase/pkmn_enemy"]
+visible = false
+position = Vector2( -76, 24 )
+texture = ExtResource( 11 )
+
+[node name="trainer" type="Sprite" parent="enemyBase/pkmn_enemy"]
+visible = false
+position = Vector2( 38, -58 )
+texture = ExtResource( 13 )
+centered = false
+region_rect = Rect2( 88, 59, 95, 45 )
+
+[node name="playerBase" type="Sprite" parent="."]
+position = Vector2( -500, 240 )
+texture = ExtResource( 14 )
+centered = false
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="pkmn_player" type="Node2D" parent="playerBase"]
+self_modulate = Color( 1, 1, 1, 0 )
+position = Vector2( 10, -96 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="FrameAnimations" type="Node2D" parent="playerBase/pkmn_player"]
+position = Vector2( 0, 72 )
+
+[node name="Sprite" type="Sprite" parent="playerBase/pkmn_player"]
+visible = false
+position = Vector2( 156, -16 )
+texture = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="playerBase/pkmn_player"]
+
+[node name="trainer" type="Sprite" parent="playerBase/pkmn_player"]
+position = Vector2( 207, -80 )
+texture = ExtResource( 20 )
+hframes = 5
+frame = 1
+
+[node name="pokeball" type="Sprite" parent="playerBase/pkmn_player"]
+visible = false
+position = Vector2( 154.543, -7.79248 )
+rotation = 7.85398
+texture = ExtResource( 21 )
+
+[node name="pkmn_player_ally" type="Node2D" parent="playerBase"]
+visible = false
+
+[node name="FrameAnimations" type="Node2D" parent="playerBase/pkmn_player_ally"]
+
+[node name="Sprite" type="Sprite" parent="playerBase/pkmn_player_ally"]
+position = Vector2( 288, 0 )
+texture = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="playerBase/pkmn_player_ally"]
+
+[node name="trainer" type="Sprite" parent="playerBase/pkmn_player_ally"]
+visible = false
+position = Vector2( 224, -80 )
+texture = ExtResource( 22 )
+centered = false
+hframes = 5
+
+[node name="pokeball" type="Sprite" parent="playerBase/pkmn_player_ally"]
+position = Vector2( -157.457, 79.6429 )
+texture = ExtResource( 11 )
+
+[node name="Fade" type="Panel" parent="."]
+visible = false
+margin_right = 512.0
+margin_bottom = 384.0
+custom_styles/panel = SubResource( 1 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Decoration" type="Sprite" parent="."]
+modulate = Color( 0.419608, 0.419608, 0.419608, 1 )
+position = Vector2( -516, 200 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Decoration2" type="Sprite" parent="."]
+modulate = Color( 0.419608, 0.419608, 0.419608, 1 )
+position = Vector2( 1030, 200 )
+texture = ExtResource( 23 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Panel_Commands" type="Panel" parent="."]
+visible = false
+margin_top = 288.0
+margin_right = 512.0
+margin_bottom = 384.0
+custom_styles/panel = ExtResource( 24 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Label_Text" type="Label" parent="Panel_Commands"]
+margin_left = 21.0
+margin_top = 24.0
+margin_right = 229.0
+margin_bottom = 82.0
+custom_fonts/font = ExtResource( 25 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_constants/line_spacing = 14
+text = "¿Qué debería hacer Pikachu?"
+autowrap = true
+
+[node name="Commands" type="Node2D" parent="Panel_Commands"]
+
+[node name="Luchar" type="Panel" parent="Panel_Commands/Commands"]
+margin_left = 252.0
+margin_top = 6.0
+margin_right = 382.0
+margin_bottom = 52.0
+focus_neighbour_right = NodePath("../Mochila")
+focus_neighbour_bottom = NodePath("../Pokemon")
+focus_mode = 2
+custom_styles/panel = SubResource( 2 )
+
+[node name="Pokemon" type="Panel" parent="Panel_Commands/Commands"]
+margin_left = 252.0
+margin_top = 48.0
+margin_right = 382.0
+margin_bottom = 94.0
+focus_neighbour_top = NodePath("../Luchar")
+focus_neighbour_right = NodePath("../Huir")
+focus_mode = 2
+custom_styles/panel = SubResource( 3 )
+
+[node name="Mochila" type="Panel" parent="Panel_Commands/Commands"]
+margin_left = 378.0
+margin_top = 6.0
+margin_right = 508.0
+margin_bottom = 52.0
+focus_neighbour_left = NodePath("../Luchar")
+focus_neighbour_bottom = NodePath("../Huir")
+focus_mode = 2
+custom_styles/panel = SubResource( 4 )
+
+[node name="Huir" type="Panel" parent="Panel_Commands/Commands"]
+margin_left = 378.0
+margin_top = 48.0
+margin_right = 508.0
+margin_bottom = 94.0
+focus_neighbour_left = NodePath("../Pokemon")
+focus_neighbour_top = NodePath("../Mochila")
+focus_mode = 2
+custom_styles/panel = SubResource( 5 )
+
+[node name="Panel_Moves" type="Panel" parent="."]
+visible = false
+margin_top = 288.0
+margin_right = 512.0
+margin_bottom = 384.0
+custom_styles/panel = ExtResource( 27 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="lblPP" type="Label" parent="Panel_Moves"]
+margin_left = 398.0
+margin_top = 44.0
+margin_right = 443.0
+margin_bottom = 82.0
+custom_fonts/font = SubResource( 6 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "PP:"
+align = 1
+valign = 1
+
+[node name="lblActualPP" type="Label" parent="Panel_Moves"]
+margin_left = 433.0
+margin_top = 47.0
+margin_right = 460.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "40"
+align = 2
+valign = 1
+
+[node name="lblTotalPP" type="Label" parent="Panel_Moves"]
+margin_left = 458.0
+margin_top = 47.0
+margin_right = 494.0
+margin_bottom = 79.0
+custom_fonts/font = SubResource( 7 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "/40"
+align = 2
+valign = 1
+
+[node name="MoveType" type="Sprite" parent="Panel_Moves"]
+position = Vector2( 448, 36 )
+texture = ExtResource( 29 )
+vframes = 24
+
+[node name="Moves" type="Node2D" parent="Panel_Moves"]
+
+[node name="Move1" type="Panel" parent="Panel_Moves/Moves"]
+visible = false
+margin_left = 4.0
+margin_top = 6.0
+margin_right = 196.0
+margin_bottom = 52.0
+focus_neighbour_right = NodePath("../Move2")
+focus_neighbour_bottom = NodePath("../Move3")
+focus_mode = 2
+custom_styles/panel = SubResource( 8 )
+
+[node name="lblMove1" type="Label" parent="Panel_Moves/Moves/Move1"]
+margin_left = 21.0
+margin_top = 14.0
+margin_right = 172.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 9 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Impactrueno"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Move2" type="Panel" parent="Panel_Moves/Moves"]
+visible = false
+margin_left = 192.0
+margin_top = 6.0
+margin_right = 384.0
+margin_bottom = 52.0
+focus_neighbour_left = NodePath("../Move1")
+focus_neighbour_bottom = NodePath("../Move4")
+focus_mode = 2
+custom_styles/panel = SubResource( 10 )
+
+[node name="lblMove2" type="Label" parent="Panel_Moves/Moves/Move2"]
+margin_left = 21.0
+margin_top = 14.0
+margin_right = 172.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 11 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Gruñido"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Move3" type="Panel" parent="Panel_Moves/Moves"]
+visible = false
+margin_left = 4.0
+margin_top = 48.0
+margin_right = 196.0
+margin_bottom = 94.0
+focus_neighbour_top = NodePath("../Move1")
+focus_neighbour_right = NodePath("../Move4")
+focus_mode = 2
+custom_styles/panel = SubResource( 12 )
+
+[node name="lblMove3" type="Label" parent="Panel_Moves/Moves/Move3"]
+margin_left = 20.0
+margin_top = 14.0
+margin_right = 171.0
+margin_bottom = 40.0
+custom_fonts/font = SubResource( 13 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Onda Trueno"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Move4" type="Panel" parent="Panel_Moves/Moves"]
+visible = false
+margin_left = 192.0
+margin_top = 49.0
+margin_right = 384.0
+margin_bottom = 95.0
+focus_neighbour_left = NodePath("../Move3")
+focus_neighbour_top = NodePath("../Move2")
+focus_mode = 2
+custom_styles/panel = SubResource( 14 )
+
+[node name="lblMove4" type="Label" parent="Panel_Moves/Moves/Move4"]
+margin_left = 20.0
+margin_top = 13.0
+margin_right = 171.0
+margin_bottom = 39.0
+custom_fonts/font = SubResource( 15 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Rayo"
+align = 1
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer1" type="AnimationPlayer" parent="."]
+
+[node name="AnimationPlayer2" type="AnimationPlayer" parent="."]
+
+[node name="Panel_MessageBox" type="Panel" parent="."]
+margin_top = 384.0
+margin_right = 512.0
+margin_bottom = 480.0
+custom_styles/panel = SubResource( 16 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="HPbar_playerS" type="Sprite" parent="."]
+visible = false
+position = Vector2( 650, 236 )
+texture = ExtResource( 40 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_playerS"]
+
+[node name="background" type="TextureRect" parent="HPbar_playerS/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_playerS/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_playerS/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="exp_bar" type="Node2D" parent="HPbar_playerS"]
+
+[node name="background" type="TextureRect" parent="HPbar_playerS/exp_bar"]
+margin_left = -90.0
+margin_top = 33.0
+margin_right = 102.0
+margin_bottom = 39.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="exp" type="TextureRect" parent="HPbar_playerS/exp_bar"]
+modulate = Color( 0.282353, 0.564706, 0.972549, 1 )
+margin_left = -90.0
+margin_top = 33.0
+margin_right = 102.0
+margin_bottom = 39.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_playerS/exp_bar"]
+position = Vector2( 6, 37 )
+texture = ExtResource( 44 )
+
+[node name="lblActualHP" type="Label" parent="HPbar_playerS"]
+margin_left = -4.0
+margin_top = -3.0
+margin_right = 60.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "40"
+align = 2
+valign = 1
+
+[node name="lblTotalHP" type="Label" parent="HPbar_playerS"]
+margin_left = 61.0
+margin_top = -3.0
+margin_right = 125.0
+margin_bottom = 29.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "/40"
+valign = 1
+
+[node name="lblLevel" type="Label" parent="HPbar_playerS"]
+margin_left = 40.0
+margin_top = -33.0
+margin_right = 104.0
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_playerS"]
+margin_left = -95.0
+margin_top = -33.0
+margin_right = 29.0
+margin_bottom = -10.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pikachu"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_playerS"]
+position = Vector2( -50, 1 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 44, 16 )
+
+[node name="HPbar_playerD" type="Sprite" parent="."]
+visible = false
+position = Vector2( 642, 185 )
+texture = ExtResource( 46 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_playerD"]
+position = Vector2( 0, 12 )
+
+[node name="background" type="TextureRect" parent="HPbar_playerD/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_playerD/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_playerD/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="lblLevel" type="Label" parent="HPbar_playerD"]
+margin_left = 40.0
+margin_top = -24.0
+margin_right = 104.0
+margin_bottom = -1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_playerD"]
+margin_left = -95.0
+margin_top = -25.0
+margin_right = 29.0
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pikachu"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_playerD"]
+position = Vector2( -50, 12.6415 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 44, 16 )
+
+[node name="lblActualHP" type="Label" parent="HPbar_playerD"]
+margin_left = 145.0
+margin_top = -250.0
+margin_right = 185.0
+margin_bottom = -236.0
+
+[node name="lblTotalHP" type="Label" parent="HPbar_playerD"]
+margin_left = 114.0
+margin_top = -259.0
+margin_right = 154.0
+margin_bottom = -245.0
+
+[node name="HPbar_playerD2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 653, 239 )
+texture = ExtResource( 46 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_playerD2"]
+position = Vector2( 0, 12 )
+
+[node name="background" type="TextureRect" parent="HPbar_playerD2/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_playerD2/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_playerD2/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="lblLevel" type="Label" parent="HPbar_playerD2"]
+margin_left = 40.0
+margin_top = -24.0
+margin_right = 104.0
+margin_bottom = -1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_playerD2"]
+margin_left = -95.0
+margin_top = -25.0
+margin_right = 29.0
+margin_bottom = -2.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Pikachu"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_playerD2"]
+position = Vector2( -50, 12.6415 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 0, 44, 16 )
+
+[node name="lblActualHP" type="Label" parent="HPbar_playerD2"]
+margin_left = 89.0
+margin_top = -281.0
+margin_right = 129.0
+margin_bottom = -267.0
+
+[node name="lblTotalHP" type="Label" parent="HPbar_playerD2"]
+margin_left = 113.0
+margin_top = -292.0
+margin_right = 153.0
+margin_bottom = -278.0
+
+[node name="HPbar_enemyS" type="Sprite" parent="."]
+visible = false
+position = Vector2( -140, 70 )
+texture = ExtResource( 47 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_enemyS"]
+position = Vector2( -18, 12 )
+
+[node name="background" type="TextureRect" parent="HPbar_enemyS/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_enemyS/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_enemyS/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="lblLevel" type="Label" parent="HPbar_enemyS"]
+margin_left = 24.0
+margin_top = -22.0
+margin_right = 88.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_enemyS"]
+margin_left = -110.0
+margin_top = -22.0
+margin_right = -46.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Abra"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_enemyS"]
+position = Vector2( -68, 13 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 44, 16 )
+
+[node name="lblActualHP" type="Label" parent="HPbar_enemyS"]
+margin_left = 1153.0
+margin_top = -112.0
+margin_right = 1193.0
+margin_bottom = -98.0
+
+[node name="lblTotalHP" type="Label" parent="HPbar_enemyS"]
+margin_left = 1177.0
+margin_top = -123.0
+margin_right = 1217.0
+margin_bottom = -109.0
+
+[node name="HPbar_enemyD" type="Sprite" parent="."]
+visible = false
+position = Vector2( -134, 36 )
+texture = ExtResource( 48 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_enemyD"]
+position = Vector2( -18, 12 )
+
+[node name="background" type="TextureRect" parent="HPbar_enemyD/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_enemyD/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_enemyD/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="lblLevel" type="Label" parent="HPbar_enemyD"]
+margin_left = 24.0
+margin_top = -22.0
+margin_right = 88.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_enemyD"]
+margin_left = -110.0
+margin_top = -22.0
+margin_right = -46.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Abra"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_enemyD"]
+position = Vector2( -68, 13 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 44, 16 )
+
+[node name="lblActualHP" type="Label" parent="HPbar_enemyD"]
+margin_left = 1419.0
+margin_top = -78.0
+margin_right = 1459.0
+margin_bottom = -64.0
+
+[node name="lblTotalHP" type="Label" parent="HPbar_enemyD"]
+margin_left = 1443.0
+margin_top = -89.0
+margin_right = 1483.0
+margin_bottom = -75.0
+
+[node name="HPbar_enemyD2" type="Sprite" parent="."]
+visible = false
+position = Vector2( -143, 90 )
+texture = ExtResource( 48 )
+script = ExtResource( 41 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="health_bar" type="Node2D" parent="HPbar_enemyD2"]
+position = Vector2( -18, 12 )
+
+[node name="background" type="TextureRect" parent="HPbar_enemyD2/health_bar"]
+margin_left = 3.0
+margin_top = -7.0
+margin_right = 106.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="health" type="TextureRect" parent="HPbar_enemyD2/health_bar"]
+modulate = Color( 0.0941176, 0.752941, 0.12549, 1 )
+margin_left = 6.0
+margin_top = -7.0
+margin_right = 102.0
+margin_bottom = 7.0
+texture = ExtResource( 42 )
+expand = true
+
+[node name="overlay" type="Sprite" parent="HPbar_enemyD2/health_bar"]
+position = Vector2( 40, 1 )
+texture = ExtResource( 43 )
+
+[node name="lblLevel" type="Label" parent="HPbar_enemyD2"]
+margin_left = 24.0
+margin_top = -22.0
+margin_right = 88.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Nv20"
+align = 2
+valign = 1
+
+[node name="lblName" type="Label" parent="HPbar_enemyD2"]
+margin_left = -110.0
+margin_top = -22.0
+margin_right = -46.0
+margin_bottom = 1.0
+custom_fonts/font = SubResource( 17 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Abra"
+valign = 1
+
+[node name="Status" type="Sprite" parent="HPbar_enemyD2"]
+position = Vector2( -68, 13 )
+texture = ExtResource( 45 )
+region_enabled = true
+region_rect = Rect2( 0, 16, 44, 16 )
+
+[node name="lblTotalHP" type="Label" parent="HPbar_enemyD2"]
+margin_left = 1457.0
+margin_top = -143.0
+margin_right = 1497.0
+margin_bottom = -129.0
+
+[node name="lblActualHP" type="Label" parent="HPbar_enemyD2"]
+margin_left = 1433.0
+margin_top = -132.0
+margin_right = 1473.0
+margin_bottom = -118.0
+
+[node name="playerParty" type="Node2D" parent="."]
+visible = false
+position = Vector2( 820, 230 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="party_bar" type="Sprite" parent="playerParty"]
+position = Vector2( -339.5, 23.5 )
+rotation = 3.14159
+texture = ExtResource( 49 )
+
+[node name="ball1" type="Sprite" parent="playerParty"]
+position = Vector2( -502, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball2" type="Sprite" parent="playerParty"]
+position = Vector2( -470, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball3" type="Sprite" parent="playerParty"]
+position = Vector2( -438, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball4" type="Sprite" parent="playerParty"]
+position = Vector2( -406, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball5" type="Sprite" parent="playerParty"]
+position = Vector2( -374, 4.5 )
+texture = ExtResource( 51 )
+
+[node name="ball6" type="Sprite" parent="playerParty"]
+position = Vector2( -342, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="enemyParty" type="Node2D" parent="."]
+visible = false
+position = Vector2( 10, 105 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="party_bar" type="Sprite" parent="enemyParty"]
+position = Vector2( 21.522, 23.3062 )
+texture = ExtResource( 49 )
+
+[node name="ball1" type="Sprite" parent="enemyParty"]
+position = Vector2( 182, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball2" type="Sprite" parent="enemyParty"]
+position = Vector2( 150, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball3" type="Sprite" parent="enemyParty"]
+position = Vector2( 118, 4.5 )
+texture = ExtResource( 51 )
+
+[node name="ball4" type="Sprite" parent="enemyParty"]
+position = Vector2( 86, 4.5 )
+texture = ExtResource( 50 )
+
+[node name="ball5" type="Sprite" parent="enemyParty"]
+rotation = 2.49671e-06
+texture = ExtResource( 52 )
+
+[node name="ball6" type="Sprite" parent="enemyParty"]
+position = Vector2( 22, 4.5 )
+texture = ExtResource( 52 )
+[connection signal="focus_entered" from="Panel_Commands/Commands/Luchar" to="." method="_on_Luchar_focus_entered"]
+[connection signal="focus_entered" from="Panel_Commands/Commands/Pokemon" to="." method="_on_Pokmon_focus_entered"]
+[connection signal="focus_entered" from="Panel_Commands/Commands/Mochila" to="." method="_on_Mochila_focus_entered"]
+[connection signal="focus_entered" from="Panel_Commands/Commands/Huir" to="." method="_on_Huir_focus_entered"]
+[connection signal="focus_entered" from="Panel_Moves/Moves/Move1" to="." method="_on_Move1_focus_entered"]
+[connection signal="focus_entered" from="Panel_Moves/Moves/Move2" to="." method="_on_Move2_focus_entered"]
+[connection signal="focus_entered" from="Panel_Moves/Moves/Move3" to="." method="_on_Move3_focus_entered"]
+[connection signal="focus_entered" from="Panel_Moves/Moves/Move4" to="." method="_on_Move4_focus_entered"]

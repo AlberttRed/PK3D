@@ -1,0 +1,63 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Assets/ui/HGSS_MessageBox_Style.tres" type="StyleBox" id=1]
+[ext_resource path="res://Assets/ui/MSG.gd" type="Script" id=2]
+[ext_resource path="res://Assets/ui/HGSS_Font_Style.tres" type="DynamicFont" id=3]
+[ext_resource path="res://Assets/ui/next.png" type="Texture" id=4]
+[ext_resource path="res://Assets/ui/next_animation.tres" type="Animation" id=5]
+
+[node name="MSG" type="Panel"]
+margin_top = 288.0
+margin_right = 512.0
+margin_bottom = 384.0
+custom_styles/panel = ExtResource( 1 )
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+msg = "\"¡Hola a todos! ¡Bienvenidos al mundo de POKÉMON! ¡Me llamo OAK! ¡Pero la gente me llama el PROFESOR POKÉMON!\""
+
+[node name="Label" type="RichTextLabel" parent="."]
+margin_left = 34.0
+margin_top = 20.0
+margin_right = 476.0
+margin_bottom = 81.0
+rect_min_size = Vector2( 442, 61 )
+size_flags_stretch_ratio = 5.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.345098, 0.345098, 0.313726, 1 )
+custom_colors/font_color_shadow = Color( 0.658824, 0.721569, 0.721569, 1 )
+custom_constants/shadow_offset_x = 2
+custom_constants/shadow_offset_y = 0
+custom_constants/line_separation = 18
+tab_size = 2
+scroll_active = false
+
+[node name="Label2" type="RichTextLabel" parent="Label"]
+margin_right = 442.0
+margin_bottom = 61.0
+size_flags_stretch_ratio = 5.0
+custom_fonts/normal_font = ExtResource( 3 )
+custom_colors/default_color = Color( 0.345098, 0.345098, 0.313726, 1 )
+custom_colors/font_color_shadow = Color( 0.658824, 0.721569, 0.721569, 1 )
+custom_constants/shadow_offset_x = 0
+custom_constants/shadow_offset_y = 2
+custom_constants/line_separation = 18
+tab_size = 2
+scroll_active = false
+
+[node name="next" type="Sprite" parent="."]
+position = Vector2( 491, 69 )
+texture = ExtResource( 4 )
+hframes = 4
+frame = 3
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="next"]
+anims/Idle = ExtResource( 5 )
+
+[node name="Timer 2" type="Timer" parent="."]
+wait_time = 0.05
+one_shot = true

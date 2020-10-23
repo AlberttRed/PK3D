@@ -1,0 +1,32 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Assets/Event/Event2D.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Sprites/trchar000.png" type="Texture" id=3]
+
+[node name="Player" groups=[
+"Player",
+] instance=ExtResource( 1 )]
+script = null
+
+[node name="Sprite" parent="." index="0"]
+texture = ExtResource( 3 )
+offset = Vector2( 0, 4 )
+vframes = 4
+hframes = 4
+
+[node name="RayCastDown" parent="." index="5"]
+script = null
+
+[node name="RayCastLeft" parent="." index="6"]
+script = null
+
+[node name="RayCastRight" parent="." index="7"]
+script = null
+
+[node name="RayCastUp" parent="." index="8"]
+script = null
+
+[node name="Camera2D" type="Camera2D" parent="." index="9"]
+current = true
+
+[editable path="Trainer"]

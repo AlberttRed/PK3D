@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cami_centre.obj-4ac2875949bc46923f0b5b9b39a3fcc9.mesh"
+
+[deps]
+
+files=[ "res://.import/cami_centre.obj-4ac2875949bc46923f0b5b9b39a3fcc9.mesh" ]
+
+source_file="res://Assets/3D Objects/Map/3Ds/cami_centre.obj"
+dest_files=[ "res://.import/cami_centre.obj-4ac2875949bc46923f0b5b9b39a3fcc9.mesh", "res://.import/cami_centre.obj-4ac2875949bc46923f0b5b9b39a3fcc9.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Assets/Event/Event.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Assets/Event/NPC.gd" type="Script" id=2]
+[ext_resource path="res://Assets/Event/event_page.scn" type="PackedScene" id=3]
+[ext_resource path="res://Assets/Sprites/f_hgss_walk.png" type="Texture" id=4]
+
+[node name="NPC" instance=ExtResource( 1 )]
+collision_mask = 1
+script = ExtResource( 2 )
+
+[node name="Sprite" parent="." index="0"]
+texture = null
+
+[node name="pages" type="Node" parent="." index="9"]
+
+[node name="event_page" parent="pages" index="0" instance=ExtResource( 3 )]
+Imagen = ExtResource( 4 )
+Interact = true
+sprite_cols = 4
+sprite_rows = 4
+OffsetSprite = Vector2( 0, 26 )
+
+[editable path="Trainer"]
+
+[editable path="pages/event_page"]

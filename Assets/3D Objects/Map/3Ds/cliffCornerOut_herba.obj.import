@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/cliffCornerOut_herba.obj-48e76bc695525a3c275143993bc39926.mesh"
+
+[deps]
+
+files=[ "res://.import/cliffCornerOut_herba.obj-48e76bc695525a3c275143993bc39926.mesh" ]
+
+source_file="res://Assets/3D Objects/Map/3Ds/cliffCornerOut_herba.obj"
+dest_files=[ "res://.import/cliffCornerOut_herba.obj-48e76bc695525a3c275143993bc39926.mesh", "res://.import/cliffCornerOut_herba.obj-48e76bc695525a3c275143993bc39926.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

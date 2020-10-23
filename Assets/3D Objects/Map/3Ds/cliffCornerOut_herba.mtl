@@ -1,0 +1,26 @@
+# Blender MTL File: 'plantilla_cliffCornerOut_herba.blend'
+# Material Count: 2
+
+newmtl grass01_a
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.784300 0.784300 0.784300
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\grass01.png
+map_d C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\grass01.png
+
+newmtl wall01_d.002
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.784300 0.784300 0.784300
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\wall01_d.png
+map_d C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\wall01_d.png

@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/terrainModels_cliffSide.obj-da7abfd6f840de9ce39bac4af086a40f.mesh"
+
+[deps]
+
+files=[ "res://.import/terrainModels_cliffSide.obj-da7abfd6f840de9ce39bac4af086a40f.mesh" ]
+
+source_file="res://Assets/3D Objects/Map/3Ds/terrainModels_cliffSide.obj"
+dest_files=[ "res://.import/terrainModels_cliffSide.obj-da7abfd6f840de9ce39bac4af086a40f.mesh", "res://.import/terrainModels_cliffSide.obj-da7abfd6f840de9ce39bac4af086a40f.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

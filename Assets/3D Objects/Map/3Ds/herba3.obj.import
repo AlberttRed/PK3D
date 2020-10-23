@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/herba3.obj-2c64d441c38dc45f14519f6375cdb6af.mesh"
+
+[deps]
+
+files=[ "res://.import/herba3.obj-2c64d441c38dc45f14519f6375cdb6af.mesh" ]
+
+source_file="res://Assets/3D Objects/Map/3Ds/herba3.obj"
+dest_files=[ "res://.import/herba3.obj-2c64d441c38dc45f14519f6375cdb6af.mesh", "res://.import/herba3.obj-2c64d441c38dc45f14519f6375cdb6af.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true

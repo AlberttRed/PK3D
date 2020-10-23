@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/no passing.wav-459e76d0779595705a0c76b8301af2cf.sample"
+
+[deps]
+
+source_file="res://Assets/Audio/Generic/no passing.wav"
+dest_files=[ "res://.import/no passing.wav-459e76d0779595705a0c76b8301af2cf.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=true
+edit/normalize=true
+edit/loop=false
+compress/mode=0
