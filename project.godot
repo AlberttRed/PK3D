@@ -37,7 +37,7 @@ _global_script_classes=[ {
 "base": "Reference",
 "class": "Trainer2",
 "language": "GDScript",
-"path": "res://Assets/Logics/Event/Trainer_class.gd"
+"path": "res://Assets/Event/Trainer_class.gd"
 } ]
 _global_script_class_icons={
 "EventMovement": "",
