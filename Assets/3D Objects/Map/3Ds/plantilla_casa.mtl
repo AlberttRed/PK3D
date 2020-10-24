@@ -10,8 +10,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 0.290300
 illum 1
-map_Kd C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\h_kage.png
-map_d C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\h_kage.png
+map_Kd C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\h_kage.png
+map_d C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\h_kage.png
 
 newmtl h_mado
 Ns 0.000000
@@ -22,8 +22,8 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:\\Users\\alber\\Roms\\h_mado.png
-map_d C:\\Users\\alber\\Roms\\h_mado.png
+map_Kd C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\h_mado.png
+map_d C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\h_mado.png
 
 newmtl yo_h01_a
 Ns 0.000000
@@ -34,5 +34,5 @@ Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
 illum 1
-map_Kd C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\yo_h01_a.png
-map_d C:\\Users\\alber\\Documents\\Pokemon3D\\Assets\\3D Objects\\Map\\Textures\\yo_h01_a.png
+map_Kd C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\yo_h01_a.png
+map_d C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\yo_h01_a.png
