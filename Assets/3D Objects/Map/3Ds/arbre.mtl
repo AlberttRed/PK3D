@@ -1,0 +1,26 @@
+# Blender MTL File: 'plantilla_arbre.blend'
+# Material Count: 2
+
+newmtl tree01
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.784300 0.784300 0.784300
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\AlberttRed\\Documents\\Roms\\tree01.png
+map_d C:\\Users\\AlberttRed\\Documents\\Roms\\tree01.png
+
+newmtl tree01_un
+Ns 0.000000
+Ka 1.000000 1.000000 1.000000
+Kd 0.784300 0.784300 0.784300
+Ks 0.000000 0.000000 0.000000
+Ke 0.000000 0.000000 0.000000
+Ni 1.450000
+d 1.000000
+illum 1
+map_Kd C:\\Users\\AlberttRed\\Documents\\Roms\\tree01_un.png
+map_d C:\\Users\\AlberttRed\\Documents\\Roms\\tree01_un.png

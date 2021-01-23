@@ -590,10 +590,10 @@ Tile.new({	"nombre": "herba",
 
 
 ),
-"cami_centre":
+"water":
 # --------------------- TILE 7 - terra_muntanya  ---------------------
 
-Tile.new({	"nombre": "cami_centre",
+Tile.new({	"nombre": "water",
 			"tipo": 2, 
 			"mec": 0}
 

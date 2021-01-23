@@ -1,4 +1,4 @@
-[gd_scene load_steps=61 format=2]
+[gd_scene load_steps=67 format=2]
 
 [ext_resource path="res://Assets/3D Objects/Map/Textures/tileset_Outdoor_1.png" type="Texture" id=1]
 [ext_resource path="res://Assets/3D Objects/Map/Textures/Big rock.png" type="Texture" id=2]
@@ -11,12 +11,15 @@
 [ext_resource path="res://Assets/3D Objects/Map/Textures/wall01/wall01_3.png" type="Texture" id=9]
 [ext_resource path="res://Assets/3D Objects/Map/Textures/Grass01_a.tres" type="Material" id=10]
 [ext_resource path="res://Assets/Logics/tile.gd" type="Script" id=11]
+[ext_resource path="res://Assets/3D Objects/Map/3Ds/arbre.obj" type="ArrayMesh" id=12]
+[ext_resource path="res://Assets/3D Objects/Map/Textures/Flowers/material_flower1.tres" type="Material" id=13]
+[ext_resource path="res://Assets/3D Objects/Map/3Ds/water.obj" type="ArrayMesh" id=14]
 
 [sub_resource type="SpatialMaterial" id=1]
 resource_name = "wall01_d.002"
 albedo_texture = ExtResource( 5 )
 
-[sub_resource type="SpatialMaterial" id=2]
+[sub_resource type="SpatialMaterial" id=1285]
 albedo_texture = ExtResource( 4 )
 
 [sub_resource type="ArrayMesh" id=3]
@@ -40,7 +43,7 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 6,
-"material": SubResource( 2 ),
+"material": SubResource( 1285 ),
 "name": "grass01_a",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -50,7 +53,7 @@ surfaces/1 = {
 [sub_resource type="ConcavePolygonShape" id=4]
 data = PoolVector3Array( -1, 0, 1, -1, 0.1973, 0.5781, -0.125, 0.1973, 0.5, 0.25, 0, 0.875, -1, 0, 1, -0.125, 0.1973, 0.5, 0.25, 0, 0.875, -0.125, 0.1973, 0.5, 0.5, 0.1973, 0, 0.875, 0, 0.375, 0.25, 0, 0.875, 0.5, 0.1973, 0, 0.875, 0, 0.375, 0.5, 0.1973, 0, 0.5781, 0.1973, -1, 1, 0, -1, 0.875, 0, 0.375, 0.5781, 0.1973, -1, -0.125, 0.1973, 0.5, -1, 0.1973, 0.5781, -1, 1.9941, -0.3398, 0.5, 0.1973, 0, -0.125, 0.1973, 0.5, -1, 1.9941, -0.3398, 0.5, 0.1973, 0, -1, 1.9941, -0.3398, -0.3398, 1.9941, -1, 0.5781, 0.1973, -1, 0.5, 0.1973, 0, -0.3398, 1.9941, -1, -1, 2, -1, -0.3398, 1.9941, -1, -1, 1.9941, -0.3398, 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 0, -1, -1, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=5]
+[sub_resource type="SpatialMaterial" id=1278]
 resource_name = "wall01_d.001"
 albedo_texture = ExtResource( 5 )
 
@@ -62,7 +65,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 18,
-"material": SubResource( 5 ),
+"material": SubResource( 1278 ),
 "name": "wall01_d",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -72,7 +75,7 @@ surfaces/0 = {
 [sub_resource type="ConcavePolygonShape" id=7]
 data = PoolVector3Array( 1, 0.1973, 0.5781, -1, 0.1973, 0.5781, -1, 1.9941, -0.3398, 1, 1.9941, -0.3398, 1, 0.1973, 0.5781, -1, 1.9941, -0.3398, 1, 1.9941, -0.3398, -1, 1.9941, -0.3398, -1, 2, -1, 1, 2, -1, 1, 1.9941, -0.3398, -1, 2, -1, 1, 0, 1, -1, 0, 1, 1, 0.1973, 0.5781, -1, 0.1973, 0.5781, 1, 0.1973, 0.5781, -1, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=1274]
 resource_name = "wall01_d.002"
 albedo_texture = ExtResource( 9 )
 
@@ -84,7 +87,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 33,
-"material": SubResource( 8 ),
+"material": SubResource( 1274 ),
 "name": "wall01_d",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -219,7 +222,7 @@ surfaces/0 = {
 [sub_resource type="ConcavePolygonShape" id=27]
 data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 0, -1, -1, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=28]
+[sub_resource type="SpatialMaterial" id=1295]
 albedo_texture = ExtResource( 1 )
 
 [sub_resource type="ArrayMesh" id=29]
@@ -230,7 +233,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 279,
 "index_count": 6,
-"material": SubResource( 28 ),
+"material": SubResource( 1295 ),
 "name": "grass01_a",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -240,7 +243,7 @@ surfaces/0 = {
 [sub_resource type="ConcavePolygonShape" id=30]
 data = PoolVector3Array( 1, 0, 1, -1, 0, 1, 1, 0, -1, -1, 0, -1, 1, 0, -1, -1, 0, 1 )
 
-[sub_resource type="SpatialMaterial" id=31]
+[sub_resource type="SpatialMaterial" id=1313]
 resource_name = "Material.001"
 flags_transparent = true
 flags_unshaded = true
@@ -254,16 +257,16 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 6,
-"material": SubResource( 31 ),
+"material": SubResource( 1313 ),
 "name": "Material",
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 4
 }
 
-[sub_resource type="BoxShape" id=33]
+[sub_resource type="BoxShape" id=1315]
 
-[sub_resource type="SpatialMaterial" id=34]
+[sub_resource type="SpatialMaterial" id=1319]
 resource_name = "Material.001"
 flags_transparent = true
 flags_unshaded = true
@@ -277,7 +280,7 @@ surfaces/0 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 6,
-"material": SubResource( 34 ),
+"material": SubResource( 1319 ),
 "name": "Material",
 "primitive": 4,
 "skeleton_aabb": [  ],
@@ -290,7 +293,7 @@ surfaces/0 = {
 resource_name = "wall01_d.002"
 albedo_texture = ExtResource( 9 )
 
-[sub_resource type="SpatialMaterial" id=38]
+[sub_resource type="SpatialMaterial" id=1326]
 resource_name = "wall01_d.002"
 albedo_texture = ExtResource( 9 )
 
@@ -315,14 +318,14 @@ surfaces/1 = {
 "blend_shape_data": [  ],
 "format": 97559,
 "index_count": 18,
-"material": SubResource( 38 ),
+"material": SubResource( 1326 ),
 "name": "wall01_d",
 "primitive": 4,
 "skeleton_aabb": [  ],
 "vertex_count": 14
 }
 
-[sub_resource type="ConcavePolygonShape" id=40]
+[sub_resource type="ConcavePolygonShape" id=1328]
 data = PoolVector3Array( -1, 2, -1, 1, 2, -1, -0.3398, 1.9941, -0.3398, 1, 1.9941, -0.3398, -0.3398, 1.9941, -0.3398, 1, 2, -1, -1, 2, 1, -1, 2, -1, -0.3398, 1.9941, 1, -0.3398, 1.9941, -0.3398, -0.3398, 1.9941, 1, -1, 2, -1, 0.7891, 0.1973, 0.7891, 1, 0.1973, 0.5781, 1, 0, 1, 0.5781, 0.1973, 1, 0.7891, 0.1973, 0.7891, 1, 0, 1, -0.3398, 1.9941, -0.3398, 1, 1.9941, -0.3398, 1, 0.1973, 0.5781, 0.7891, 0.1973, 0.7891, -0.3398, 1.9941, -0.3398, 1, 0.1973, 0.5781, 0.5781, 0.1973, 1, -0.3398, 1.9941, 1, -0.3398, 1.9941, -0.3398, 0.7891, 0.1973, 0.7891, 0.5781, 0.1973, 1, -0.3398, 1.9941, -0.3398 )
 
 [sub_resource type="SpatialMaterial" id=41]
@@ -426,6 +429,27 @@ surfaces/0 = {
 "skeleton_aabb": [  ],
 "vertex_count": 10
 }
+
+[sub_resource type="ConcavePolygonShape" id=50]
+data = PoolVector3Array( 3, 0, 1, -1, 0, 1, 3, 0, -3, -1, 0, -3, 3, 0, -3, -1, 0, 1, 5, 0, 0.25, -3, 0, 0.25, 5, 6.168, -4.8457, -3, 6.168, -4.8457, 5, 6.168, -4.8457, -3, 0, 0.25 )
+
+[sub_resource type="ArrayMesh" id=51]
+surfaces/0 = {
+"aabb": AABB( -1, 0.05, -1, 2, 9.99868e-06, 2 ),
+"array_data": PoolByteArray( 0, 0, 128, 191, 205, 204, 76, 61, 0, 0, 128, 191, 0, 127, 0, 0, 127, 0, 0, 127, 141, 6, 142, 6, 0, 0, 128, 63, 205, 204, 76, 61, 0, 0, 128, 191, 0, 127, 0, 0, 127, 0, 0, 127, 255, 59, 142, 6, 0, 0, 128, 191, 205, 204, 76, 61, 0, 0, 128, 63, 0, 127, 0, 0, 127, 0, 0, 127, 141, 6, 255, 59, 0, 0, 128, 63, 205, 204, 76, 61, 0, 0, 128, 63, 0, 127, 0, 0, 127, 0, 0, 127, 255, 59, 255, 59 ),
+"array_index_data": PoolByteArray( 0, 0, 1, 0, 2, 0, 3, 0, 2, 0, 1, 0 ),
+"blend_shape_data": [  ],
+"format": 97559,
+"index_count": 6,
+"material": ExtResource( 13 ),
+"name": "grass01_a",
+"primitive": 4,
+"skeleton_aabb": [  ],
+"vertex_count": 4
+}
+
+[sub_resource type="ConcavePolygonShape" id=52]
+data = PoolVector3Array( -1, 1, -1, 1, 1, -1, -1, 1, 1, 1, 1, 1, -1, 1, 1, 1, 1, -1 )
 
 [node name="Example" type="Spatial"]
 
@@ -556,7 +580,7 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="Roca petita/Roca petita/StaticBody"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
-shape = SubResource( 33 )
+shape = SubResource( 1315 )
 
 [node name="Roca gran2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.91724, -1.5162, -1.83963 )
@@ -578,7 +602,7 @@ material/1 = null
 [node name="StaticBody" type="StaticBody" parent="cliffCornerIn_original"]
 
 [node name="CollisionShape" type="CollisionShape" parent="cliffCornerIn_original/StaticBody"]
-shape = SubResource( 40 )
+shape = SubResource( 1328 )
 
 [node name="cliffCornerIn_original2" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -4.44203, -0.162068, -2.68721 )
@@ -589,7 +613,7 @@ material/1 = null
 [node name="StaticBody" type="StaticBody" parent="cliffCornerIn_original2"]
 
 [node name="CollisionShape" type="CollisionShape" parent="cliffCornerIn_original2/StaticBody"]
-shape = SubResource( 40 )
+shape = SubResource( 1328 )
 
 [node name="cliffCornerIn_herba" type="MeshInstance" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -1.1356, 3.15734, -7.80122 )
@@ -621,3 +645,30 @@ material/0 = null
 
 [node name="CollisionShape" type="CollisionShape" parent="cliffSide_original3/StaticBody"]
 shape = SubResource( 47 )
+
+[node name="arbre" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4467, -0.669697, 4.65501 )
+mesh = ExtResource( 12 )
+material/0 = null
+material/1 = null
+
+[node name="StaticBody" type="StaticBody" parent="arbre"]
+
+[node name="CollisionShape" type="CollisionShape" parent="arbre/StaticBody"]
+transform = Transform( 0.494389, 0, 0, 0, 0.988777, 0, 0, 0, 0.988777, 0.5, 0, 0 )
+shape = SubResource( 50 )
+
+[node name="flower" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -6.23133, -1.16749, 8.32893 )
+mesh = SubResource( 51 )
+material/0 = null
+
+[node name="water" type="MeshInstance" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -8.67637, -1.24079, 11.3124 )
+mesh = ExtResource( 14 )
+material/0 = null
+
+[node name="StaticBody" type="StaticBody" parent="water"]
+
+[node name="CollisionShape" type="CollisionShape" parent="water/StaticBody"]
+shape = SubResource( 52 )

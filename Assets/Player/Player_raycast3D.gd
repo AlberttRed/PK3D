@@ -151,7 +151,7 @@ func intersect_tile_new(dir, cells=1, ignore = []):
 		for c in collisions:
 			var point = get_collision_point()
 			#print("col " + c.collider.get_name())
-			if c.collider is GridMap:
+			if c.collider is GridMap and c.collider.is_in_group("TILES"):
 				#print("translation: " + str(body.translation + direction*cells))
 				
 				var posit = c.collider.world_to_map(point)#body.translation + dir*cells)
@@ -251,19 +251,20 @@ func print_colliders():
 
 func interact():
 	#update()
-	result = intersect_point(direction, 1)
-	intersect_tile(direction, 1)
+#	result = intersect_point(direction, 1)
+#	intersect_tile(direction, 1)
 	for c in get_colliders():
-		print("INTERACT " + c.get_parent().get_name())
-		c = c.get_parent()
-		if typeof(c) == TYPE_OBJECT and c.is_in_group("Interact"):
-			#c.add_child(c.event_pages)
-			if c.is_in_group("surf_area") and !body.surfing:
-				body.surf()
-			elif !c.is_in_group("surf_area"):
-				c.eventTarget = self
-				c.exec(facing_inverse[body.facing])
-			
+		if !c.object is GridMap:
+			print("INTERACT " + c.object.get_parent().get_name())
+			c = c.get_parent()
+			if typeof(c) == TYPE_OBJECT and c.is_in_group("Interact"):
+				#c.add_child(c.event_pages)
+				if c.is_in_group("surf_area") and !body.surfing:
+					body.surf()
+				elif !c.is_in_group("surf_area"):
+					c.eventTarget = self
+					c.exec(facing_inverse[body.facing])
+	print("tile: " + str(tile.tipo))
 	if tile.tipo == CONST.TILE_TYPE.SURF and !body.surfing:
 		print("INTERACT")
 		body.surf()
