@@ -571,7 +571,7 @@ var TILES = {
 "unknown":
 # --------------------- TILE 0 - herba  ---------------------
 
-Tile.new({	"name": "unkwown",
+Tile.new({	"nombre": "unknown",
 			"tipo": -1, 
 			"mec": -1}
 
@@ -582,7 +582,7 @@ Tile.new({	"name": "unkwown",
 "herba":
 # --------------------- TILE 0 - herba  ---------------------
 
-Tile.new({	"name": "herba",
+Tile.new({	"nombre": "herba",
 			"tipo": 0, 
 			"mec": 0}
 
@@ -590,10 +590,10 @@ Tile.new({	"name": "herba",
 
 
 ),
-"terra_muntanya":
+"cami_centre":
 # --------------------- TILE 7 - terra_muntanya  ---------------------
 
-Tile.new({	"name": "terra_muntanya",
+Tile.new({	"nombre": "cami_centre",
 			"tipo": 2, 
 			"mec": 0}
 

@@ -1,11 +1,10 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://Assets/Event/Event.gd" type="Script" id=1]
 [ext_resource path="res://Assets/Animations/walking_animationPlayer.tscn" type="PackedScene" id=2]
 [ext_resource path="res://Assets/Event/Trainer.tscn" type="PackedScene" id=3]
 [ext_resource path="res://Assets/Sprites/Characters/trainer000.png" type="Texture" id=4]
 [ext_resource path="res://Assets/Sprites/Characters/trback000.png" type="Texture" id=5]
-[ext_resource path="res://Assets/Player/Player_raycast.gd" type="Script" id=6]
 [ext_resource path="res://Assets/Event/AudioSystem2D.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Sprites/f_hgss_walk.png" type="Texture" id=8]
 
@@ -307,17 +306,13 @@ nature_id = 8
 playback_process_mode = 0
 
 [node name="RayCastDown" type="Node2D" parent="."]
-script = ExtResource( 6 )
 
 [node name="RayCastLeft" type="Node2D" parent="."]
 position = Vector2( 0, 1 )
-script = ExtResource( 6 )
 
 [node name="RayCastRight" type="Node2D" parent="."]
-script = ExtResource( 6 )
 
 [node name="RayCastUp" type="Node2D" parent="."]
-script = ExtResource( 6 )
 
 [node name="CollisionShape2D" type="CollisionShape" parent="."]
 transform = Transform( 0.7, 0, 0, 0, 1, 0, 0, 0, 0.8, 0, 1, 0 )

@@ -15,10 +15,13 @@ var direction
 var moved = false
 var SPEED = 2
 
+var up = Vector3(0, 0, 0)
+
 var jumping = false
 var surfing setget set_surfing,get_surfing
 var pushing = false
 var running = false setget set_running,get_running
+var on_stairs = false
 
 var in_event = false
 var collided = false
@@ -68,6 +71,11 @@ var raycasts = {'right': 'RayCastRight',
 				'left': 'RayCastLeft',
 				'up': 'RayCastUp',
 				'down': 'RayCastDown'}
+				
+var rayshapes = {'right': 'RayShapeRight',
+				'left': 'RayShapeLeft',
+				'up': 'RayShapeUp',
+				'down': 'RayShapeDown'}
 				
 var next_step = {0:1,
 				13: 15,
@@ -163,12 +171,12 @@ func jump(cells_jump):
 		print(str($Sprite.position))
 
 func check_first_step():
-	if first_input and !GLOBAL.is_last_move(last_facing) and !jumping and !being_controlled:
+	if is_pre_movement():
 		movement = translation
 		step_speed = 0.15
 		$AnimationPlayer.playback_speed = 2
 	else:
-		movement = translation + moves[facing] * tile_size
+		movement = translation + up + moves[facing] * tile_size
 		if running:
 			step_speed = 0.15
 			$AnimationPlayer.playback_speed = 2.0
@@ -196,6 +204,7 @@ func _on_MoveTween_tween_completed(object, key):
 	can_move = true
 	emit_signal("move")
 	actual_position = translation
+	up = Vector3(0, 0, 0)
 
 func walk_animation():
 	if running:
@@ -284,4 +293,7 @@ func teleport(position):
 	
 func get_direction():
 	return directions[$Sprite.frame]
+	
+func is_pre_movement():
+	return first_input and !GLOBAL.is_last_move(last_facing) and !jumping and !being_controlled
 	

@@ -94,7 +94,7 @@ func set_connections():
 			E_scene.is_connection = true
 			set_process(true)
 			#GAME_DATA.WORLD.load_map(E_scene, false, get_position() + E_connection_pos)
-			connections_loaded = true
+			connections_loaded = true 
 	if !W_connection.empty() and W_connection_pos != null:
 		print("connect W!")
 		Scene = W_connection

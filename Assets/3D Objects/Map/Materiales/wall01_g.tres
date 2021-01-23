@@ -1,0 +1,8 @@
+[gd_resource type="SpatialMaterial" load_steps=2 format=2]
+
+[ext_resource path="res://Assets/3D Objects/Map/Textures/wall01_g.png" type="Texture" id=1]
+
+[resource]
+resource_name = "wall01_g"
+albedo_color = Color( 0.7843, 0.7843, 0.7843, 1 )
+albedo_texture = ExtResource( 1 )

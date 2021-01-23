@@ -188,6 +188,7 @@ func new_game():
 	#ACTUAL_MAP.load_map(false)
 	if GAME_DATA.PLAYER.get_parent() != GAME_DATA.WORLD.EVENTOS:
 		#GAME_DATA.PLAYER.get_parent().remove_child(GAME_DATA.PLAYER)
+		#scene.get_node("Grid_Objects").add_child(GAME_DATA.PLAYER)
 		GAME_DATA.WORLD.EVENTOS.add_child(GAME_DATA.PLAYER)
 	#WORLD.load_map(scene, false)
 	WORLD.load_maps()

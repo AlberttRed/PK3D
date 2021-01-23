@@ -31,6 +31,10 @@ func _physics_process(delta):# and !$MoveTween.is_active():
 			if can_move(dir):
 					can_move = false
 					move(dir)
+#					if !moved:# and !$RayCastUp.stairs:
+#						stairs_off()
+#
+					
 
 func _input(event):
 	if event.is_action_pressed("ui_start") and !GUI.is_visible():
@@ -42,6 +46,7 @@ func _input(event):
 	if event.is_action_pressed("ui_cancel") and !GUI.is_visible():	
 		set_running(true)
 		print("RUNNING")
+		print(GAME_DATA.PLAYER.get_parent().get_name())
 		#GAME_DATA.load_game()
 #		for e in GAME_DATA.EVENTS_LOADED.get_children():
 #			print(e.get_name() + " " + str(e.actual_position))
@@ -94,3 +99,38 @@ func save():
 		"being_controlled" : being_controlled
 	}
 	return save_dict
+
+func restart_rayshapes():
+	$RayCastUp.stairs = false
+	#$RayCastUp.stairs_direction = Vector3(0, 0, 0)
+	$RayCastDown.stairs = false
+	#$RayCastDown.stairs_direction = Vector3(0, 0, 0)
+	$RayCastLeft.stairs = false
+	#$RayCastLeft.stairs_direction = Vector3(0, 0, 0)
+	$RayCastRight.stairs = false
+	#$RayCastRight.stairs_direction = Vector3(0, 0, 0)
+	
+func stairs_on(stairs_direction):
+	$RayCastUp.stairs = true
+	$RayCastDown.stairs = true
+	$RayCastLeft.stairs = true
+	$RayCastRight.stairs = true
+	$RayCastUp.stairs_facing = facing
+	$RayCastDown.stairs_facing = facing
+	$RayCastLeft.stairs_facing = facing
+	$RayCastRight.stairs_facing = facing
+	$RayCastUp.stairs_direction = stairs_direction
+	$RayCastDown.stairs_direction = stairs_direction
+	$RayCastLeft.stairs_direction = stairs_direction
+	$RayCastRight.stairs_direction = stairs_direction
+
+func stairs_off():
+	$RayCastUp.stairs = false
+	$RayCastDown.stairs = false
+	$RayCastLeft.stairs = false
+	$RayCastRight.stairs = false
+	$RayCastUp.stairs_facing = ""
+	$RayCastDown.stairs_facing = ""
+	$RayCastLeft.stairs_facing = ""
+	$RayCastRight.stairs_facing = ""
+

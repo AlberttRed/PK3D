@@ -1,14 +1,14 @@
-# Blender MTL File: 'plantilla_mapa.blend'
+# Blender MTL File: 'plantilla_obj_1x1.blend'
 # Material Count: 1
 
-newmtl etcs_a
-Ns 0.000000
+newmtl Material.001
+Ns 225.000000
 Ka 1.000000 1.000000 1.000000
-Kd 0.784300 0.784300 0.784300
-Ks 0.000000 0.000000 0.000000
+Kd 0.800000 0.800000 0.800000
+Ks 0.500000 0.500000 0.500000
 Ke 0.000000 0.000000 0.000000
 Ni 1.450000
 d 1.000000
-illum 1
-map_Kd C:\\Users\\alber\\Documents\\Roms\\etcs_a.png
-map_d C:\\Users\\alber\\Documents\\Roms\\etcs_a.png
+illum 2
+map_Kd C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\etcs_a\\row-2-col-1.png
+map_d C:\\Users\\AlberttRed\\Documents\\Godot\\Projects\\Pokemon 3D\\Assets\\3D Objects\\Map\\Textures\\etcs_a\\row-2-col-1.png

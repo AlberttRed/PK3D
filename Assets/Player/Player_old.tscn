@@ -1,10 +1,9 @@
-[gd_scene load_steps=22 format=2]
+[gd_scene load_steps=21 format=2]
 
 [ext_resource path="res://Assets/Animations/walking_animationPlayer.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Assets/Player/Player.gd" type="Script" id=2]
 [ext_resource path="res://Assets/Sprites/m_hgss.png" type="Texture" id=3]
 [ext_resource path="res://Assets/Event/Trainer.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Assets/Player/Player_raycast.gd" type="Script" id=7]
 [ext_resource path="res://Assets/Event/AudioSystem2D.gd" type="Script" id=8]
 
 [sub_resource type="Animation" id=1]
@@ -314,16 +313,12 @@ shape = SubResource( 15 )
 playback_process_mode = 0
 
 [node name="RayCastDown" type="Node2D" parent="."]
-script = ExtResource( 7 )
 
 [node name="RayCastLeft" type="Node2D" parent="."]
-script = ExtResource( 7 )
 
 [node name="RayCastRight" type="Node2D" parent="."]
-script = ExtResource( 7 )
 
 [node name="RayCastUp" type="Node2D" parent="."]
-script = ExtResource( 7 )
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 0.60058, 0.799316, 0, -0.799316, 0.60058, 0, 63, 49 )

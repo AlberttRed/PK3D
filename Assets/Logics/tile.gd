@@ -1,8 +1,9 @@
 extends SpatialMaterial
 
 var id = null
-var name = null
+var nombre = ""
 var tipo = 0
+
 var double = false
 var MySpriteClass = get_script()
 var m = load("res://Assets/Logics/tile.gd")
